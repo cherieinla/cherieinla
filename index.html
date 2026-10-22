@@ -512,60 +512,51 @@ footer { padding-block: 40px 56px; display: grid; gap: 14px; justify-items: cent
       </div>
 
       <!-- Collapsible Form Container -->
-<div id="collapsible-form" class="form-container" style="display:none;">
-  <!-- Formspree Success Message Container -->
-  <div data-fs-success style="font-weight: 600; font-size: 17px; margin-bottom: 16px;"></div>
+      <div id="collapsible-form" class="form-container" style="display:none;">
+        <!-- Formspree Success Message Container -->
+        <div data-fs-success style="font-weight: 600; font-size: 17px; margin-bottom: 16px;"></div>
 
-  <form id="lead" class="lead" novalidate>
-    <div class="field">
-      <label for="f-name">Name</label>
-      <input id="f-name" name="name" type="text" autocomplete="name" required data-fs-field />
-      <span data-fs-error="name" style="font-size: 13px; color: var(--accent);"></span>
-    </div>
+        <form id="lead" class="lead" novalidate>
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required data-fs-field />
+            <span data-fs-error="name" style="font-size: 13px; color: var(--accent);"></span>
+          </div>
 
-    <div class="field">
-      <label for="f-email">Email</label>
-      <input id="f-email" name="email" type="email" autocomplete="email" required data-fs-field />
-      <span data-fs-error="email" style="font-size: 13px; color: var(--accent);"></span>
-    </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required data-fs-field />
+            <span data-fs-error="email" style="font-size: 13px; color: var(--accent);"></span>
+          </div>
 
-    <div class="field">
-      <label for="f-type">I'm reaching out about</label>
-      <select id="f-type" name="topic" data-fs-field>
-        <option>A brand collaboration</option>
-        <option>Private sessions</option>
-        <option>A group class</option>
-        <option>A brand event</option>
-        <option>Something else</option>
-      </select>
-    </div>
+          <div class="field">
+            <label for="f-type">I'm reaching out about</label>
+            <select id="f-type" name="topic" data-fs-field>
+              <option>A brand collaboration</option>
+              <option>Private sessions</option>
+              <option>A group class</option>
+              <option>A brand event</option>
+              <option>Something else</option>
+            </select>
+          </div>
 
-    <div class="field">
-      <label for="f-co">Brand or company (optional)</label>
-      <input id="f-co" name="company" type="text" autocomplete="organization" data-fs-field />
-    </div>
+          <div class="field">
+            <label for="f-co">Brand or company (optional)</label>
+            <input id="f-co" name="company" type="text" autocomplete="organization" data-fs-field />
+          </div>
 
-    <div class="field wide">
-      <label for="f-msg">Tell me more</label>
-      <textarea id="f-msg" name="message" rows="4" data-fs-field></textarea>
-      <span data-fs-error="message" style="font-size: 13px; color: var(--accent);"></span>
-    </div>
+          <div class="field wide">
+            <label for="f-msg">Tell me more</label>
+            <textarea id="f-msg" name="message" rows="4" data-fs-field></textarea>
+            <span data-fs-error="message" style="font-size: 13px; color: var(--accent);"></span>
+          </div>
 
-    <div class="wide submit">
-      <!-- data-fs-submit-btn automatically handles disabling/re-enabling during submission -->
-      <button class="btn primary" type="submit" data-fs-submit-btn>Send inquiry</button>
-      <!-- data-fs-error acts as the general/form-level error container -->
-      <p id="lead-note" role="status" aria-live="polite" data-fs-error style="font-size: 15px; margin: 0;"></p>
-    </div>
-  </form>
-</div>
-
-<!-- Formspree AJAX Initialization & Script -->
-<script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#lead', formId: 'xzednjey' });
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+          <div class="wide submit">
+            <button class="btn primary" type="submit" data-fs-submit-btn>Send inquiry</button>
+            <p id="lead-note" role="status" aria-live="polite" data-fs-error style="font-size: 15px; margin: 0;"></p>
+          </div>
+        </form>
+      </div>
 
     </div>
   </section>
@@ -612,9 +603,14 @@ footer { padding-block: 40px 56px; display: grid; gap: 14px; justify-items: cent
       }
     });
   }
-
-  });
 })();
 </script>
+
+<!-- Formspree AJAX Initialization & Script -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#lead', formId: 'xzednjey' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body></html>
